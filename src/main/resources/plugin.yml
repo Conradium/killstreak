@@ -1,0 +1,24 @@
+# src/main/resources/plugin.yml
+name: KillstreakNametags
+version: '${project.version}'
+main: com.conradium.killstreak.KillstreakNametags # Corrected package name here
+api-version: 1.20
+authors: [conradium]
+description: Displays colored nametag triangles based on kill count with decay.
+commands:
+  ksname:
+    description: Main command for KillstreakNametags plugin.
+    usage: /<command> [version|reload|setkills <player> <kills>]
+    aliases: [kstags, nametags]
+    permission: ksname.use
+    permission-message: You do not have permission to use this command.
+permissions:
+  ksname.use:
+    description: Allows use of the base /ksname command.
+    default: true
+  ksname.reload:
+    description: Allows reloading the KillstreakNametags plugin configuration.
+    default: op
+  ksname.setkills:
+    description: Allows setting a player's kill count manually.
+    default: op

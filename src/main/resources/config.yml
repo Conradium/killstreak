@@ -1,0 +1,21 @@
+# src/main/resources/config.yml
+# KillstreakNametags Plugin Configuration
+
+# Tier thresholds for nametag colors based on kill count.
+# A player's nametag color is determined by their CURRENT kill count.
+tiers:
+  # Players with up to this many kills will have a GREEN nametag.
+  green-max-kills: 0
+  # Players with at least this many kills, but less than red-min-kills,
+  # will have a YELLOW nametag.
+  yellow-min-kills: 1
+  # Players with at least this many kills will have a RED nametag.
+  red-min-kills: 5
+
+# Decay durations for nametag tiers.
+# If a player doesn't get a new kill, their tier will decay after this duration.
+decay:
+  # Duration in minutes after which a RED nametag will decay to YELLOW.
+  red-to-yellow-duration-minutes: 10080
+  # Duration in minutes after which a YELLOW nametag will decay to GREEN.
+  yellow-to-green-duration-minutes: 1440
